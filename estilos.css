@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: white;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+#logo{
+    background: white;
+    width: 1190px;
+    margin: 0px auto;
+}
+
+
+.contenedor{
+    width: 90%;
+    max-width: 1500px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap:10px; /*margen de 20px en cada bloque*/
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,auto);
+}
+ 
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .sidebar1,
+.contenedor .footer,
+.contenedor .footer1{
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contenedor .header{
+    background: #12203E;S
+    color: #fff;
+    grid-column-start: 1;
+    grid-column-end: -1;
+
+}
+
+.contenedor .contenido{
+    grid-column: span 2;
+}
+
+
+.contenedor .sidebar{
+    grid-column: 3 / 4;
+   
+    background: #12203E;
+    text-align: center;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    grid-row: 2 / 4;
+}
+
+.contenedor .sidebar1{
+    grid-column: 3 / 4;
+    background: rgb(255, 255, 255);
+    text-align: center;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    grid-row: 2 / 4;
+}
+
+.contenedor .sidebar2{
+    grid-column: 3 / 4;
+    background: rgb(255, 255, 255);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    grid-row: 2 / 4;
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2,
+.contenedor .widget-3,
+.contenedor .widget-4{
+    background: #07294b;
+    color: #fff;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor .widget-11,
+.contenedor .widget-22,
+.contenedor .widget-33,
+.contenedor .widget-44{
+    background: #07294b;
+    color: #fff;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor .footer{
+    background: #07294b;
+    color: #fff;
+    text-align: left;
+    height: 50px;
+    font-size: 10px;
+    line-height: 50px;
+
+    grid-column: span 3;
+}
+
+.contenedor .footer1{
+    background: #07294b;
+    color: #fff;
+    text-align: left;
+    height: 50px;
+    font-size: 12px;
+    line-height: 50px;
+
+    grid-column: span 3;
+}
+
+@media screen and (max-width: 768px) {
+    .contenedor .contenido{
+        grid-column: 1 / -1;
+    }
+
+    .contenedor .header{
+        grid-column: 1 / -1;
+    }
+
+    .contenedor .sidebar {
+        grid-column:1 / -1 ;
+    }
+    .contenedor .sidebar1 {
+        grid-column:1 / -1 ;
+    }
+    .contenedor .sidebar2 {
+        grid-column:1 / -1 ;
+    }
+    .contenedor .widget-1 {
+        grid-column:span 2 ;
+    }
+
+    .contenedor .widget-11{
+        grid-column:span 2 ;
+
+    }
+      
+   
+}
+
+
+
+
+
+@charset "utf-8";
+
+/* css document */
+
+#menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+#menu #item{
+    float: left;
+}
+
+#menu #item a{
+    background: #12203E;
+    color: rgba(255,255,255,1);
+    padding: 12px 22px;
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+#menu #desple{
+    display: none;
+    position: absolute;
+    min-width: 220px;
+}
+
+#menu #item a:hover{
+    background: rgba(0,102,204,1);
+}
+
+#menu #item:hover #desple{
+    display: block;
+}
+
+body{
+    background:white;
+    /* background-image: url(); */
+    background-size: 100vw; /* 100% el ancho de la ventana */
+    background-attachment: fixed;
+    margin: 0;
+    /* font-family: monospace; */
+}
+
+form{
+    width: 450px;
+    margin: auto;
+    background: rgba(0,0,0,0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top:20px;
+    border-radius: 7px;
+
+}
+
+h2{
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+ input, textarea{
+     width: 100%;
+     margin-bottom:20px;
+     box-sizing: border-box;
+     font-size:17px;
+     font-size: 17px;
+     border: none;
+ }
+
+textarea{
+    min-height: 100px;
+    max-height: 200px;
+    padding: 20px;
+
+}
+
+#boton{
+    background: #31384A;
+    color: #fff;
+    padding: 20px;
+}
+
+#boton:hover {
+    cursor: pointer;
+}
+
+/*responsive, @media estilos que le aplican al navegador 
+siempre y cuando se cumpla algo*/
+
+@media(max-width:480px){
+    form{
+        width: 100px;
+    }
+}
